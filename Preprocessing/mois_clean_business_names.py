@@ -6,6 +6,8 @@
 # MAGIC - 지점, 지점명, 센터 등 제외 
 # MAGIC - 사업장명+지점명 붙어있는 경우 보류 처리 
 
+# COMMAND ----------
+
 import re
 import pandas as pd
 
@@ -243,14 +245,10 @@ def preprocess_for_embedding(df):
 # COMMAND ----------
 
 # 1차 기본 전처리
-df = spark.table("silver.mois.mois_deltatable_new")
-cleaned_business_name_df = process_business_names(df)
-
-# 2차 전처리 
-final_business_name_df = process_final_business_names(cleaned_business_name_df)
-
-# 임베딩용 최종 전처리 적용
-final_business_name_df = preprocess_for_embedding(final_business_name_df)
+df = spark.table("silver.mois.mois_deltatable_new") 
+cleaned_business_name_df = process_business_names(df) # 1차 기본 전처리 
+final_business_name_df = process_final_business_names(cleaned_business_name_df) # 2차 전처리 
+final_business_name_df = preprocess_for_embedding(final_business_name_df) # 임베딩용 최종 전처리 적용
 
 print("사업장명 전처리 후 행 수:", len(cleaned_business_name_df)) 
 print("최종 전처리 완료된 데이터프레임 수:", len(final_business_name_df)) 
@@ -278,34 +276,3 @@ final_business_name = spark.createDataFrame(final_business_name_df, schema=schem
 
 # Delta 테이블로 저장
 final_business_name.write.format("delta").mode("overwrite").saveAsTable("silver.mois.final_business_name")
-
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC ###### 아래는 테스트 코드 ########
-
-# COMMAND ----------
-
-final_business_name_df["정제된사업장명"].value_counts().head(100)
-
-# COMMAND ----------
-
-# 글자 수가 1 이하인 사업장명 찾기
-one_letter_df = final_business_name_df[
-    final_business_name_df["정제된사업장명"].apply(lambda x: len(str(x).strip()) <= 1)
-]
-
-print("글자 수가 1개 이하인 사업장명 수:", len(one_letter_df))
-print(one_letter_df["정제결과"].value_counts().to_string())
-
-# COMMAND ----------
-
-# 숫자만 존재하는 정제된사업장명 찾기
-only_digits_df = final_business_name_df[
-    final_business_name_df["정제된사업장명"].apply(lambda x: str(x).isdigit())
-]
-
-print("숫자만 있는 사업장명 수:", len(only_digits_df))
-
-print(only_digits_df["정제결과"].value_counts().to_string())
