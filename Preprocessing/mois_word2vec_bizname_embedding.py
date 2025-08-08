@@ -140,4 +140,4 @@ def process_all_batches(source_table, target_table, batch_size=10000, sub_batch_
     return
 
 # 실행
-process_all_batches(source_table, target_table, batch_size=10000, sub_batch_size=5000)
+process_all_batches(source_table, target_table, batch_size=10000, sub_batch_size=5000)  

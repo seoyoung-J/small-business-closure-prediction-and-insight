@@ -244,16 +244,11 @@ def preprocess_for_embedding(df):
 
 # COMMAND ----------
 
-# 1차 기본 전처리
+# 전처리 수행 
 df = spark.table("silver.mois.mois_deltatable_new") 
 cleaned_business_name_df = process_business_names(df) # 1차 기본 전처리 
 final_business_name_df = process_final_business_names(cleaned_business_name_df) # 2차 전처리 
-final_business_name_df = preprocess_for_embedding(final_business_name_df) # 임베딩용 최종 전처리 적용
-
-print("사업장명 전처리 후 행 수:", len(cleaned_business_name_df)) 
-print("최종 전처리 완료된 데이터프레임 수:", len(final_business_name_df)) 
-print("임베딩용 전처리 완료 후 데이터 수:", len(final_business_name_df))
-display(final_business_name_df) 
+final_business_name_df = preprocess_for_embedding(final_business_name_df) # 임베딩용 전처리 
 
 # COMMAND ----------
 
