@@ -93,7 +93,7 @@
 
 ### 결과물 
 - [웹 시연 영상](https://drive.google.com/file/d/1bIU9HW_oHcoDe9Y-D2o9LXvAtu7P-KUD/view?usp=drive_link)
-- ![웹 서비스 메인 페이지](https://github.com/seoyoung-J/small-business-closure-prediction-and-insight/blob/main/StreamlitApp/assets/images/main_page.png?raw=true
+![웹 서비스 메인 페이지](https://github.com/seoyoung-J/small-business-closure-prediction-and-insight/blob/main/StreamlitApp/assets/images/main_page.png?raw=true
 )
 
 ---
