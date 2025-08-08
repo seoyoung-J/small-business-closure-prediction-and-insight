@@ -93,12 +93,13 @@
 
 ### 결과물 
 - [웹 시연 영상](https://drive.google.com/file/d/1bIU9HW_oHcoDe9Y-D2o9LXvAtu7P-KUD/view?usp=drive_link)
-- ![웹 서비스 메인 페이지](<StreamlitApp\assets\images\mian_page.png>)
+- ![웹 서비스 메인 페이지](https://github.com/seoyoung-J/small-business-closure-prediction-and-insight/blob/main/StreamlitApp/assets/images/main_page.png?raw=true
+)
 
 ---
 
 ### 참고 
-- 본 레포지토리는 프로젝트에서 담당한 주요 역할을 기반으로 코드 구조 및 파일을 재정리한 버전입니다. 
+- 본 레포지토리는 프로젝트에서 담당한 주요 역할을 바탕으로 코드 구조 및 파일을 재정리한 버전입니다. 
 - 원본 협업 저장소: [asac_7_dataanalysis](https://github.com/da-analysis/asac_7_dataanalysis.git) 
 
 
