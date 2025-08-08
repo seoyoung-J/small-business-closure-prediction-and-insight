@@ -3,6 +3,7 @@
 
 ---
 
+
 ### 프로젝트 개요 
 - 문제 정의: 
     - 코로나19 이후 소상공인의 폐업률이 급증하며, 지역·상권별 매출 격차 확대  
@@ -83,10 +84,18 @@
         - 목적: 파생변수 추가가 예측 성능에 미치는 영향 확인  
         - 결과: recall/f1-score에서 약간의 차이는 있었지만, ROC-AUC 기준으로는 기본 피처가 가장 우수 
 
+
 ### 웹 서비스 구현 
 - Streamlit 기반 웹 서비스 개발
 - Databricks 대시보드 및 REST API 엔드포인트 연동
 - Nginx + HTTPS 도메인(asacdataanalysis.co.kr) 배포
+
+
+### 결과물 
+- [웹 시연 영상](https://drive.google.com/file/d/1bIU9HW_oHcoDe9Y-D2o9LXvAtu7P-KUD/view?usp=drive_link)
+- ![웹 서비스 메인 페이지](<StreamlitApp\assets\images\mian_page.png>)
+
+---
 
 ### 참고 
 - 본 레포지토리는 프로젝트에서 담당한 주요 역할을 기반으로 코드 구조 및 파일을 재정리한 버전입니다. 

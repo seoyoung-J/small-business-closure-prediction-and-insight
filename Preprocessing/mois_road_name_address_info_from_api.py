@@ -1,5 +1,5 @@
 # Databricks notebook source
-# 도로명주소로부터 시도, 시군구, 법정동 정보를 수집하는 전처리 코드ㅡ 
+# 도로명주소로부터 시도, 시군구, 법정동 정보를 수집하는 전처리 코드  
 # 행정안전부 도로명주소 API를 병렬 호출하여 Delta 테이블로 저장
 
 from datetime import datetime, timedelta

@@ -1,0 +1,5 @@
+streamlit
+pandas
+matplotlib
+gspread==6.2.1
+oauth2client==4.1.3 
