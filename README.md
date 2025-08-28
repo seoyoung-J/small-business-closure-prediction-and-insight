@@ -105,7 +105,8 @@
 
 ---
 
-### 참고 
+### 참고자료  
 - 본 레포지토리는 프로젝트에서 담당한 주요 역할을 바탕으로 코드 구조 및 파일을 재정리한 버전입니다. 
-- 원본 협업 저장소: [asac_7_dataanalysis](https://github.com/da-analysis/asac_7_dataanalysis.git) 
+- 원본 협업 저장소: [asac_7_dataanalysis](https://github.com/da-analysis/asac_7_dataanalysis.git)
+- 상세 분석 과정은 [Notion](https://www.notion.so/2089627a91c7804dadedeceea1d4884e?v=8d37600a577e46f1bcec447df314b4a6&source=copy_link)에 정리되어 있습니다.  
 
